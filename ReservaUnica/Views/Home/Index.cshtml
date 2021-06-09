@@ -1,0 +1,31 @@
+﻿@model ReservaUnica.Models.CadastroPontosReservaViewModel
+@{
+    ViewData["Title"] = "Bem vindo ao Reserva Única";
+}
+<div class="container">
+    <div class="col-md-12 text-center">
+        <h2>Bem vindo ao Reserva Única</h2>
+        <h5>Esse sistema tem como objetivo cadastrar mesas de acordo com os pontos no mapa. <br />
+        Clique no botão de cadastro para ser direcionado a tela.
+        </h5>  
+        <strong>Tecnologias utilizadas:</strong>
+        <ul class="list-group">
+            <li class="list-group-item">.NET 5 (C#)</li>
+            <li class="list-group-item">ASPNET MVC</li>
+            <li class="list-group-item">Javascript/JQuery</li>
+            <li class="list-group-item">GoJs</li>
+            <li class="list-group-item">HTML/CSS</li>
+            <li class="list-group-item">BootStrap</li>
+            <li class="list-group-item">Database interno (Json)</li>
+        </ul>
+    </div>    
+    <div class="row text-center mt-3">        
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <a asp-controller="Home" asp-action="Cadastrar" class="btn btn-outline-primary mb-2" title="Clique para cadastrar os pontos de reservas">Cadastrar Pontos de Reservas</a>
+            @if (Model.Id.HasValue) 
+            {
+                <a asp-controller="Home" asp-action="Editar" asp-route-id="1" class="btn btn-outline-info mb-2" title="Clique para editar o último cadastro de pontos de reservas">Atualizar Último Cadastro</a>
+            }
+        </div>
+    </div>
+</div>
